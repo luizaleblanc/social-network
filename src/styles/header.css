@@ -1,0 +1,48 @@
+@import url("./globalStyles.css");
+
+        .header {
+            background-color: var(--color-grey-0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12%;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            font-size: 1.5rem;
+            color: var(--color-grey-1);
+            font-weight: bold;
+        }
+        .header-exit {
+            font-size: 1rem;
+            color: var(--color-grey-2);
+            cursor: pointer;
+        }
+
+        .logo {
+           display: flex;
+        }
+        .header-content h1 {
+           gap: 1rem;
+        }
+
+        .header-content {
+            margin-top: -0.3125rem;
+            gap: 0.0625rem;
+        }
+    
+

@@ -1,0 +1,53 @@
+.ul__aside {
+    display: flex;
+    height: auto;
+    width: fit-content;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.username__aside {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.user__info-aside {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+    width: 130%;
+}
+.div__img {
+    display: flex;
+    justify-content: end;
+    max-width: 20%;
+}
+aside img {
+    height: 80%;
+    width: 80%;
+}
+.title__aside{
+    font-family: var(--font-global);
+    margin-bottom: 8%;
+    padding: 2%;
+}
+.button__user-aside {
+    display: flex;
+    justify-content: end;
+    margin-left: 50%;
+    background-color: var(--gray-scale-100);
+    border: 1px solid var(--gray-scale-700);
+}
+.button__on-aside {
+    background-color: #364FC7;
+    color: #FFFF;
+    font-weight: var(--title-2-font-weight);
+    border: none;
+}

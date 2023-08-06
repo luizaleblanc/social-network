@@ -1,0 +1,37 @@
+@import url(./globalStyles.css);
+
+    .title__user700{
+        font-family: var(--font-primary);
+        font-weight: 700;
+        font-size: 1.75rem; 
+        line-height: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .title__user600{
+        font-family: var(--font-primary);
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .title__user400{
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .anothertitle_user_400{
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1rem;
+    }
+
+    .title__user-last{
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }

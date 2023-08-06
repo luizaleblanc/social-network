@@ -1,0 +1,26 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--fontFamily1);
+}
+
+:root {
+    --colorWhite: #ffffff;
+    --color-grey-0: #0A0C0D;
+    --color-grey-1: #212529;
+    --color-grey-2: #495057;
+    --color-grey-3: #dee2e6;
+    
+    --color1: #4263EB;
+    --color1-hover: #364FC7;
+    
+    --fontFamily1: "Inter", sans-serif;
+    
+    --fontSize1: 0.875rem;
+    
+    --fontSize1rem: 1rem;
+    
+    --marginPage: 2.5rem 0;
+    
+    --borderRad1: 0.25rem;
+}

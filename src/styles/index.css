@@ -1,0 +1,170 @@
+@import url("./globalStyles.css");
+
+  .box-1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .box-1 > .imagens {
+    margin-bottom: 0.6rem;
+  }
+
+  .for-set {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 0.625rem;
+  }
+
+  li > button {
+    border: none;
+    background-color: white;
+  }
+  
+  .imagens {
+    height: 3.125rem;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .conteudo-principal {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  .container__posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .username {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+  }
+
+  .follow-suggestions {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .profession {
+    font-size: 16px;
+    color: var(--cor-secundaria);
+  }
+  .section-title-suggestions {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .section-title-posts {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .post-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .post-content {
+    font-size: 18px;
+  }
+  .post-all {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7rem;
+    gap: 10rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 7rem auto 0 auto;
+  }
+
+  .info-people {
+    margin-bottom: 1.8rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* height: 40%; */
+    width: 100%;
+  }
+  .input__uidesign{
+    font-family: var(--font-primary);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      color: #495057;
+      border: 1px solid;
+      border-color: #dee2e6;
+      resize: none;
+  }
+  .input__uidesign:focus {
+    border-color: var(--color1);
+    border: 2px solid var(--color1);
+    outline: none
+  }
+
+  .titulo {
+    display: flex;
+    width: 60vw;
+    height: 3vh;
+    justify-content: space-around;
+  }
+  .titulo button {
+    border: none;
+  }
+
+  .box-1 .infos {
+    margin: none;
+    line-height: 0rem;
+    width: 150px;
+  }
+
+  .likes-pagina {
+      display: flex;
+      text-align: center;
+      gap: 2rem;
+      vertical-align: middle;
+      margin-top: 20px;
+      align-items: center;
+  }
+
+  .likes-pagina>:last-child {
+    margin-left: -30px;
+    margin-bottom: -4px;
+  }
+
+  .contagem {
+      vertical-align: text-top;
+  }
+
+  @media (max-width:1025px) {
+    .post-all {
+      flex-direction: column;
+    }
+    .ul__aside {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      width: 100%;
+    }
+    .follow-suggestions {
+      width: 100%;
+    }
+  }

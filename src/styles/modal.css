@@ -1,0 +1,63 @@
+.modal__container {
+    width: 100%;
+    max-width: 80%;
+    border: none;
+    border-radius: 4%;
+    line-height: 1.8rem;
+    height: 60%;
+}
+.name__modal {
+    display: flex;
+    width: 100%;
+}
+.img__modal {
+    height: 40%;
+    width: 60%;
+}
+.auxImg__modal {
+    width: 30%;
+    height: 100%;
+}
+.nameUSer__modal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.close__btn-modal {
+    background-color: var(--gray-scale-300);
+    font-weight: var(--title-2-font-weight);
+    margin-right: 2%;
+    border-radius: 30%;
+    height: 9%;
+    padding: 1%;
+    position: absolute;
+    right: 0;
+    top: 8%;
+    cursor: pointer;
+    font-family: var(--font-global);
+}
+.title__modal {
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+@media(min-width: 768px) {
+    .modal__container {
+        margin-left: 14%;
+        width: 50%;
+        height: 50%;
+    }
+    .title__modal {
+        margin-left: 2%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 100%;
+    }
+    .paragraph__modal {
+        margin-left: 2%;
+        line-height: 100%;
+        font-size: 100%;
+    }
+}
+
+
+

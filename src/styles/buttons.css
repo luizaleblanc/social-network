@@ -1,0 +1,61 @@
+@import url("./globalStyles.css");
+
+.botao-seguir {
+    border: 1.5px solid var(--color-grey-0);
+    background-color: var(--colorWhite);
+    color: black;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.botao-seguir:hover {
+    background-color: var(--color1-hover);
+    color: var(--colorWhite);
+}
+
+.botao-sair {
+    background-color: var(--color-grey-0);
+    padding: 6px;
+    color: white;
+}
+
+.botao-sair:hover {
+    background-color: var(--color-grey-1);
+}
+
+.botao-abrir-post {
+    background-color: var(--color-grey-0);
+    border-radius: 4px;
+    padding: 6px;
+    color: white;
+}
+
+.botao-4:hover {
+    background-color: var(--color-grey-1);
+}
+
+.botao-postar {
+    border: 3px solid var(--color1);
+    background-color: var(--color1);
+    color: white;
+    display: flex;
+    align-self: flex-end;
+    width: fit-content;
+    align-items: center;
+    padding: 0.4rem;
+    border-radius: 4px;
+}
+
+.botao-postar:hover {
+    background-color: var(--color1-hover);
+}
+
+.like-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 6px;
+    background-color: white;
+}
