@@ -1,7 +1,8 @@
 import {posts, suggestUsers, users} from "./database.js"
+import { showModalWithData } from "./modal.js";
 
 function createNewpostAndSuggestions(user, suggestedUsers) {
-  // SECTION_FOR_SET
+  
   const sectionForSet = document.createElement("section");
   sectionForSet.classList.add("for-set")
 
@@ -54,7 +55,6 @@ function createNewpostAndSuggestions(user, suggestedUsers) {
   form.append(inputTitle, textArea, postButton);
   sectionForSet.append(box1, form);
 
-  // SECTION_FOLLOW_SUGGESTIONS
   const sectionFollowSuggestions = document.createElement("section");
   sectionFollowSuggestions.classList.add("follow-sugestions")
 
@@ -70,7 +70,6 @@ function createNewpostAndSuggestions(user, suggestedUsers) {
 
   sectionFollowSuggestions.append(titleFollowSuggestions, ulFollowSuggestions);
 
-  // SECTION_POST_ALL
   const sectionPostAll = document.createElement("section");
   sectionPostAll.classList.add("post-all");
   sectionPostAll.append(sectionForSet, sectionFollowSuggestions);
@@ -150,6 +149,11 @@ function createPostElement(post) {
   const openPostBtn = document.createElement("button");
   openPostBtn.classList.add("botao-abrir-post");
   openPostBtn.innerText = "Abrir Post";
+  openPostBtn.addEventListener("click", () => {
+    console.log("Luiza linda");
+    showModalWithData(post);
+  })
+
 
   const likeImg = document.createElement("img");
   likeImg.src = "assets/img/gray-heart.svg";

@@ -1,12 +1,10 @@
-import { users, posts } from './database.js';
+import { users, posts } from "./database.js";
 
-let showPost = document.querySelector(".botao-abrir-post")
-let exemplo = document.addEventListener("DOMContentLoaded", function() {
-let main = document.querySelector(".conteudo-principal");
-console.log(main)
-let searchButton = document.querySelector(".show__post");
+let showPost = document.querySelector(".botao-abrir-post");
 
-function creatModal() {
+function createModal() {
+  let main = document.querySelector(".conteudo-principal");
+
   if (!document.querySelector(".modal__container")) {
     let dialog = document.createElement("dialog");
     dialog.classList.add("modal__container");
@@ -14,47 +12,51 @@ function creatModal() {
   }
 }
 
-function showModal(number, value) {
-    let dialog = document.querySelector(".modal__container");
-    if (!dialog) {
-      creatModal();
-      dialog = document.querySelector(".modal__container");
-    }
+let exemplo = document.addEventListener("DOMContentLoaded", function () {
+  
+  let searchButton = document.querySelector(".show__post");
+  createModal();
+});
 
-function creatShowModal() {
+export function showModalWithData(post) {
+  let dialog = document.querySelector(".modal__container");
+
+  if (!dialog) {
+    createModal();
+    dialog = document.querySelector(".modal__container");
+  }
+
+  function closeModal() {
     let modal = document.querySelector(".modal__container");
-    modal.showModal();
-}
-    
-function closeModal() {
-  let modal = document.querySelector(".modal__container");
-  modal.close();
-}
+    modal.close();
+  }
 
   dialog.innerHTML = `
-    <div class="name__modal">
-      <div class="auxImg__modal">
-        <img class="img__modal" src="${value.img}" alt="Imagem">
-      </div>
-      <div class="nameUser__modal">
-        <h3>${value.user}</h3>
-        <small>${value.stack}</small>
-      </div>
+  <div class="name__modal">
+    <div class="auxImg__modal">
+      <img class="img__modal" src="${post.img}" alt="Imagem">
     </div>
-    <div class="title__modal">
-      <h2>${number.title}</h2>
-      <span class="close__btn-modal">X</span>
+    <div class="nameUser__modal">
+      <h3>${post.user}</h3>
+      <small>${post.stack}</small>
     </div>
-    <form>
-      <label class="paragraph__modal">${number.text}</label>
-    </form>
-  `;
+  </div>
+  <div class="title__modal">
+    <h2>${post.title}</h2>
+    <span class="close__btn-modal">X</span>
+  </div>
+  <form>
+    <label class="paragraph__modal">${post.text}</label>
+  </form>
+`;
 
   let span = dialog.querySelector(".close__btn-modal");
   span.addEventListener("click", closeModal);
+
+  dialog.showModal();
 }
 
-function renderizarModal(postId) {
+export function renderizarModal(postId) {
   console.log(postId);
   for (let number of posts) {
     if (number.id_post == postId) {
@@ -66,6 +68,3 @@ function renderizarModal(postId) {
     }
   }
 }
-
-creatModal();
-});

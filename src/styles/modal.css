@@ -8,6 +8,7 @@
 }
 .name__modal {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 .img__modal {
@@ -42,14 +43,13 @@
 }
 @media(min-width: 768px) {
     .modal__container {
-        margin-left: 14%;
         width: 50%;
         height: 50%;
     }
     .title__modal {
         margin-left: 2%;
         margin-top: 5%;
-        margin-bottom: 10%;
+        margin-bottom: 2%;
         font-size: 100%;
     }
     .paragraph__modal {
