@@ -150,20 +150,18 @@ function createPostElement(post) {
   openPostBtn.classList.add("botao-abrir-post");
   openPostBtn.innerText = "Abrir Post";
   openPostBtn.addEventListener("click", () => {
-    console.log("Luiza linda");
     showModalWithData(post);
   })
 
 
   const likeImg = document.createElement("img");
-  likeImg.src = "assets/img/gray-heart.svg";
+  likeImg.src = `./src/assets/img/gray-heart.svg`
   likeImg.alt = "Empty Heart (Post not liked)";
 
   const likeButton = document.createElement("button");
-  likeButton.addEventListener("click", () => {
-    toggleLikeButtonImage(likeImg);
-  })
+  
   likeButton.classList.add("like-button");
+  likeButton.setAttribute("data-switch", `false`)
 
   likeButton.appendChild(likeImg);
 
@@ -178,13 +176,33 @@ function createPostElement(post) {
 }
 
 function toggleLikeButtonImage(likeImg) {
-  if (likeImg.src.includes("gray-heart.svg")) {
-    likeImg.src = "assets/img/red-heart.svg";
-    likeImg.alt = "Red Heart (Liked)";
-  } else {
-    likeImg.src = "assets/img/gray-heart.svg";
-    likeImg.alt = "Empty Heart (Post not liked)";
-  }
+  console.log (event.target.getAttribute("data-switch"))
+  // if (likeImg.src==="./src/assets/img/gray-heart.svg") {
+  //   likeImg.src = "./src/assets/img/red-heart.svg";
+  //   likeImg.alt = "Red Heart (Liked)";
+  // } else {
+  //   likeImg.src = "./src/assets/img/gray-heart.svg";
+  //   likeImg.alt = "Empty Heart (Post not liked)";
+  // }
+}
+
+function likeAdd(){
+  const likeButtons = document.querySelectorAll(".like-button")
+  for (let i = 0; i < likeButtons.length; i++) {
+    likeButtons[i].addEventListener("click", () => {
+      if(!posts[i].liked){
+        posts[i].likes+=1
+        posts[i].liked=true;
+        }else{
+            posts[i].likes-=1
+            posts[i].liked=false;
+        }
+      toggleLikeButtonImage ()
+      renderPage(users, posts, suggestUsers);
+      likeButtons[i].src = `${posts[i].liked ?"./src/assets/img/gray-heart.svg":"./src/assets/img/red-heart.svg"}`;
+      console.log (likeButtons[i].src)
+    })
+  } 
 }
 
 function createUserPostsElement(posts) {
@@ -205,9 +223,12 @@ function createUserPostsElement(posts) {
 
 function renderPage(users, posts, suggestions) {
   const main = document.querySelector("main");
+  main.innerHTML=""
   main.classList.add("conteudo-principal");
   main.appendChild(createNewpostAndSuggestions(users[0], suggestions));
   main.appendChild(createUserPostsElement(posts)); 
+  likeAdd ()
 }
 
 renderPage(users, posts, suggestUsers);
+
